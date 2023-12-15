@@ -6,7 +6,8 @@ on:
 #  push:
 #    branches:
 #      - master
-    
+env:
+  HOME: "/root"
 jobs:
   build:
     runs-on: self-hosted
