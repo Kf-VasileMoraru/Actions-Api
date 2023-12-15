@@ -27,3 +27,4 @@ jobs:
         
       - name: Build
         run: dotnet build --configuration Release --no-restore
+        working-directory: ./vasea
