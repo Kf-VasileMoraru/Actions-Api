@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: self-hosted
-    
+    working-directory: ./Vasea
     
     steps:
       - name: Checkout
@@ -22,12 +22,9 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '7.0.x'
-          working-directory: ./Vasea
       
       - name: Install dependencies
         run: dotnet restore
-        working-directory: ./Vasea
         
       - name: Build
         run: dotnet build --configuration Release --no-restore
-        working-directory: ./Vasea  
