@@ -25,6 +25,7 @@ jobs:
         run: |
           ls -la
           pwd
+          zip --version
       
       - name: Install dependencies
         run: dotnet restore
