@@ -23,6 +23,7 @@ jobs:
         
       - name: test LS
         run: |
+          ls -la
           pwd
       
       - name: Install dependencies
