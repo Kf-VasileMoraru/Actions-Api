@@ -22,7 +22,9 @@ jobs:
           dotnet-version: '7.0.x'
         
       - name: test LS
-        run: ls -la
+        run: |
+          ls -la
+          pwd
       
       - name: Install dependencies
         run: dotnet restore
