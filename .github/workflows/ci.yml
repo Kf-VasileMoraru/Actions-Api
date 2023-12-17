@@ -27,6 +27,8 @@ jobs:
           pwd
           echo "vasea"
           echo "${{github.workspace}}"
+          cd ./vasea
+          pwd
           
       
       - name: Install dependencies
