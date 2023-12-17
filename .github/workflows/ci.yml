@@ -25,7 +25,9 @@ jobs:
         run: |
           ls -la
           pwd
-          zip --version
+          echo "vasea"
+          echo "${{github.workspace}}"
+          
       
       - name: Install dependencies
         run: dotnet restore
