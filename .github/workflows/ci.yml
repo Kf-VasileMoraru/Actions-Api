@@ -27,7 +27,8 @@ jobs:
           pwd
           echo "vasea"
           echo "${{github.workspace}}"
-          cd ./vasea
+          cd ./root
+          cd ./dev
           pwd
           
       
@@ -40,7 +41,7 @@ jobs:
         working-directory: ./vasea
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: vasea
           path: ./vasea/bin/Release/net7.0
