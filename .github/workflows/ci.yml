@@ -27,7 +27,7 @@ jobs:
           pwd
           echo "vasea"
           echo "${{github.workspace}}"
-          cd /root
+          cd /
           cd ./dev
           pwd
           
