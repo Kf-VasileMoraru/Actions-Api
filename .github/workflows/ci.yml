@@ -4,7 +4,6 @@ on:
   workflow_dispatch: 
     
 env:
-  HOME: "/root"
   DOTNET_VERSION: "7.0.x"
   
 jobs:
