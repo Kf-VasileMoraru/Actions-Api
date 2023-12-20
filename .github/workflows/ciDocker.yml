@@ -1,4 +1,4 @@
-﻿name: ci
+﻿name: ciDocker
 
 on:
   workflow_dispatch: 
