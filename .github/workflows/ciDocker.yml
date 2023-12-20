@@ -36,7 +36,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          ssh: ssh://root@10.10.11.101
           push: true
           tags: gitactions:latest
           
