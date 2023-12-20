@@ -31,7 +31,7 @@ jobs:
         with:
           endpoint: ssh://root@10.10.11.101
           push: true
-          tags: Git-Actions:latest
+          tags: gitactions:latest
           
 
       
