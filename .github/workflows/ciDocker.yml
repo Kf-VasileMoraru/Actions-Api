@@ -25,6 +25,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
         with:   
           endpoint: ssh://root@10.10.11.101
+          buildkitd-flags: --debug
           
       - name: Build and push
         uses: docker/build-push-action@v5
