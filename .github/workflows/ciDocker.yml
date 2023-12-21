@@ -22,7 +22,6 @@ jobs:
           host: 10.10.11.101
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          rm: true
           source: "Program.cs"
           target: /vasile
         
