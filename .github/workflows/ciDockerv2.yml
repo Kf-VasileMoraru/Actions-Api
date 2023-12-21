@@ -26,6 +26,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v5
         with:
+          context: ./dockerDev
           push: true
           tags: a2259687814/vasile-vasile:latest
 
