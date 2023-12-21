@@ -16,6 +16,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
+      - name: copy file via ssh key
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: 10.10.11.101
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "Program.cs"
+          target: /vasile
+        
       - name: Set up SSH
         uses: appleboy/ssh-action@master
         with:
@@ -23,6 +32,6 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-           pwd
+           cat /vasile/Program.cs
 
       
