@@ -28,6 +28,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: git-hub-actions/app:latest
+          tags: a2259687814/git-hub-actions/:latest
 
       
