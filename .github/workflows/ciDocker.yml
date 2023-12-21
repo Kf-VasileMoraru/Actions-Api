@@ -23,6 +23,6 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            scp -v -o StrictHostKeyChecking=no -r Program.cs root@10.10.11.101:/root/vasile
+           pwd
 
       
