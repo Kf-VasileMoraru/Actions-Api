@@ -36,8 +36,9 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-           cd /vasile/dockerDev
-           docker-compose down
-           docker compose up -d
+            cd /vasile/dockerDev
+            docker stop Vasea-TEST
+            docker rm Vasea-TEST
+            docker compose up -d
 
       
