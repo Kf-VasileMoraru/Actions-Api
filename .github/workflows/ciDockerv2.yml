@@ -53,4 +53,4 @@ jobs:
             cd /vasile/dockerDev
             docker stop Vasea-TEST
             docker rm Vasea-TEST
-            docker compose up -d --project-name new_stack_name
+            docker compose up -d -p new_stack_name
