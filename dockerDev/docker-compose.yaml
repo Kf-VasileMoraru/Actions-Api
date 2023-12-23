@@ -13,5 +13,3 @@ services:
 networks:
   my-network:
     driver: bridge
-    
-project: new_stack_name
