@@ -25,6 +25,9 @@ jobs:
           rm: true
           source: "dockerDev/docker-compose.yaml"
           target: /vasile/dev
+          
+      - name: Delay for 10s
+        run: sleep 10   
         
       - name: Set up SSH
         uses: appleboy/ssh-action@master
