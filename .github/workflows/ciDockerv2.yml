@@ -12,10 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Set commit hash variable
-        id: commit_hash
-        run: echo "::set-output name=COMMIT_HASH::$(git rev-parse --short ${{ github.sha }})"
-        
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -34,6 +30,6 @@ jobs:
           push: true
           tags: |
             a2259687814/vasile-vasile:latest
-            a2259687814/vasile-vasile:${{ steps.commit_hash.outputs.COMMIT_HASH }}
+            a2259687814/vasile-vasile:${{ github.sha }}
 
       
