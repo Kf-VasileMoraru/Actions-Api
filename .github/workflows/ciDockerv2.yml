@@ -28,6 +28,8 @@ jobs:
         with:
           context: ./dockerDev
           push: true
-          tags: a2259687814/vasile-vasile:latest
+          tags: |
+            a2259687814/vasile-vasile:latest
+            a2259687814/vasile-vasile:latestV1
 
       
