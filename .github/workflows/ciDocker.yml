@@ -23,8 +23,8 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           rm: true
-          source: "Program.cs"
-          target: /vasile
+          source: "dockerDev/docker-compose.yaml"
+          target: /vasile/dev
         
       - name: Set up SSH
         uses: appleboy/ssh-action@master
@@ -33,6 +33,7 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-           cat /vasile/Program.cs
+           cd /vasile/dev
+           docker compose up
 
       

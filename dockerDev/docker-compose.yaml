@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  nginx:
+    image: a2259687814/vasile-vasile:latest
+    container_name: Vasea-TEST
+    ports:
+      - "999:80"
