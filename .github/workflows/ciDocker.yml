@@ -24,7 +24,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           rm: true
           source: "dockerDev/docker-compose.yaml"
-          target: /vasile/dev
+          target: /vasile
           
       - name: Delay for 10s
         run: sleep 10   
@@ -36,7 +36,7 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-           cd /vasile/dev
-           docker compose up
+           cd /vasile/dockerDev
+           docker compose up -d
 
       
