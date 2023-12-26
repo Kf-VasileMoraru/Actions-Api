@@ -18,7 +18,7 @@ jobs:
           host: 10.10.11.101
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          rm: true
+#          rm: true
           source: "dockerDev/docker-compose.yaml"
           target: /vasile
         
@@ -39,6 +39,9 @@ jobs:
           tags: |
             a2259687814/vasile-vasile:latest
             a2259687814/vasile-vasile:${{ github.sha }}
+          cache-from: type=registry,ref=a2259687814/vasile-vasile:buildcache
+          cache-to: type=registry,ref=a2259687814/vasile-vasile:buildcache,mode=max
+          
 
       - name: Delay for 30s
         run: sleep 30  
