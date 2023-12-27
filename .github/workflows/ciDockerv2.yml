@@ -32,6 +32,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
+        id: docker_build
         uses: docker/build-push-action@v5
         with:
           context: ./dockerDev
@@ -57,3 +58,6 @@ jobs:
             docker stop Vasea-TEST
             docker rm Vasea-TEST
             docker compose -p new_stack_name up -d
+      
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
